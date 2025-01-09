@@ -1,47 +1,106 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-body{
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+body {
   font-family: "Poppins", serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f4f8;
+  color: #1c2130;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.title{
-text-align: center;
-
+.title {
+  text-align: center;
+  color: #028f76;
+  font-size: 3rem;
+  margin: 20px 0;
 }
-.main_container{
-  border: 1px solid black;
-  padding: 10px;
+
+.main_container {
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 90%;
 }
 
 .input_container {
-  border: 1px solid black;
-  padding: 10px;
   text-align: center;
   background-color: #028f76;
   border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
 }
+
 .input_container textarea {
-  padding: 10px;
-  font-size: 17px;
-  width: 500px;
-  border-radius: 10px;
-  border: none;
-  color: #1c2130;
+  padding: 12px;
+  font-size: 16px;
+  /* width: 100%; */
+  height: 100px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
   outline: none;
-  resize:vertical;
-
+  resize: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #1c2130;
+  background-color: #ffffff;
 }
 
+.input_container textarea:focus {
+  border-color: #028f76; /* ફોકસ વખતે બોર્ડર કલર */
+  box-shadow: 0 0 5px #028f76;
+}
 .content_container {
-  border: 1px solid black;
-  margin: 10px;
-  padding: 10px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
 }
-/* .qr_container {
-  border: 1px solid black;
-  width: 50%;
 
-} */
+.qr_container {
+  padding: 10px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #e6f7f4, #c9e9e3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: #028f76;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .input_container textarea {
+    font-size: 14px;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .main_container {
+    padding: 15px;
+  }
+
+  .input_container textarea {
+    font-size: 12px;
+  }
+}
